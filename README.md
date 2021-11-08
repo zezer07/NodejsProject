@@ -1,5 +1,7 @@
 # Cinema-Management-System-
 
+Web Application for Cinema Clients and Subscriptions Management .
+
 Website that enables movies and clients' subscriptions management, including employee management - roles and permissions.
 
 According to employee permissions they can: View, Edit, Add and Delete movies and the clients of the cinema. They can also subscribe a client to a movie. 
