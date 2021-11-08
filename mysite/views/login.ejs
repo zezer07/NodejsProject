@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+  
+   <%if(msg.length>0) 
+   {%>
+      <div> Error the username or password is incorrect, please retry !</div>
+      <%}
+   %>
+    
+
+  <div> 
+
+    <h1>Movies- Subscriptions Web Site</h1>
+
+    <h2>Log in Page </h2>
+
+    <form action = "/getuserdata" method="POST">
+      
+    User name : <input type ="text" name = "username"/> <br/> <br/> 
+    Password : <input type="password" name = "password"/> <br/> <br/>
+
+    <input type= "submit" value = "Login"/> <br/> <br/>
+
+      New user ? : <a href="/CreateAccount">to create an account</a>
+
+    </form>
+   
+  </div>
+
+</body>
+
+</html>

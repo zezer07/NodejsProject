@@ -1,0 +1,24 @@
+<html>
+
+
+<body>
+    <%if(msg.length>0) 
+    {%>
+       <div> You have not been registered to the system. Please consult the system administrator!</div>
+       <%}
+    %>
+
+    <h1>Movies- Subscriptions Web Site</h1>
+    
+    <h2>Create an account </h2>
+
+<form action="/getNewUserdata" method="POST">
+
+User Name : <input type = "text" name = "username" /> <br/> <br/>
+Password : <input type = "password" name = "password" /> <br/> <br/>
+
+<input type = "submit" value= "Create" />
+
+</form>
+
+</html>

@@ -1,0 +1,45 @@
+
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+
+<html>
+
+<body>
+
+
+    <h2 class = "HeaderCenter">Add New User</h2>
+
+    <div class="DesignUserEdit">
+
+        <br/>
+
+    <form action="/UserManagement/add/<%=userId%>" method="POST">
+     
+             First Name :  <input type="text" name="firstName"/> <br/> 
+             Last Name :  <input type="text" name="lastName"/> <br/> 
+             User Name :  <input type="text"  name="userName"/> <br/> 
+             Session timeout :  <input type="text"  name="sessionTimeout"/> <br/> 
+             Created date :  <input type="text" name="createdDate"/> <br/> <br/>
+             Permisions : <br/> <br/>
+              <input type="checkbox"  name="viewSub" /> View Subscriptions <br/> 
+              <input type="checkbox"  name="createSub" /> Create Subscriptions <br/> 
+              <input type="checkbox"  name="deleteSub" /> Delete Subscriptions <br/>  
+              <input type="checkbox"  name="viewMovs" /> View Movies <br/> 
+              <input type="checkbox"  name="createMovs" /> Create Movies <br/> 
+              <input type="checkbox"  name="deleteMovs" /> Delete Movies <br/> 
+              <input type="checkbox"  name="updateMovs" /> Update Movies <br/>  <br/>
+              <input type= "submit" name = "vote" value = "Save"/> <br/> <br/>
+              <input type= "submit" name="vote" value = "Cancel"/> <br/> <br/>
+
+              </div>
+    
+    </form>
+
+
+
+
+</body>
+
+
+
+</html>

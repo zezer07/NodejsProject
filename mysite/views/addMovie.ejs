@@ -1,0 +1,30 @@
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+<html>
+
+<body>
+
+    <h2 class = "HeaderCenter">Add New Movie</h2>
+
+    <div class="DesignFilmEdit">
+
+        <br/>
+
+    <form action="/Movies/add/<%=userId%>" method="POST">
+     
+            Name :  <input type="text" name="Name"/> <br/> 
+             Genres :  <input type="text" name="Genres"/> <br/> 
+             Image url :  <input type="text"  name="Image"/> <br/> 
+             Premiered :  <input type="text"  name="Premiered"/> <br/> <br/> 
+
+             <input type="submit" name="vote" value="Save"/> <br/> <br/>
+             <input type="submit" name="vote" value="Cancel"/>
+            
+              </div>
+    
+    </form>
+
+</body>
+
+
+</html>

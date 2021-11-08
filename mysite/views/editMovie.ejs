@@ -1,0 +1,25 @@
+
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+<html>
+
+    <body>
+        
+    <div class= DesignFilmEdit>
+
+        <h2 class="HeaderCenter"><%= movie.Name%></h2>
+
+        <form action="/Movies/update/<%=movie._id%>/<%=userId%>" method="POST">
+                Name : <input type="text" value="<%= movie.Name%>" name="Name"/> <br/> <br/>
+                Genres : <input type ="text" value= "<%= movie.Genres%>" name="Genres"/> <br/> <br/>
+                image url : <input type ="text" value= "<%= movie.Image%>" name="Image"/> <br/> <br/>
+                Premiered : <input type ="text" value= "<%= movie.Premiered%>" name="Premiered"/> <br/> <br/>
+
+                <input type="submit" value="update"/>
+        </form>
+
+    </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,78 @@
+
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+<html>
+
+<body>
+
+<h2 class = "HeaderCenter">Users</h2>
+
+
+<div class="HeaderCenter">
+
+<form action="/UserManagement/addUser/<%= userId%>" method="POST">
+
+  <input  type= "submit" value = "Add User"/>
+
+
+</form>
+
+</div>
+
+<% users.forEach(user=>{
+
+    %>
+
+    <% if(user.id!="618901d69d5f15fbc9132155")
+            {%>
+    
+    <div class="DesignUsers">
+
+      <form action="/UserManagement/editUserData/<%=user.id%>" method="POST"> <br/>
+
+       <b>Name </b> : <%=user.FirstName%> <%=user.LastName%> <br/>
+       <b>User Name</b> : <%=user.UserName%> <br/>
+        <b>Session timeout</b> : <%=user.SessionTimeOut%> <br/>
+        <b>Created date </b> : <%=user.CreatedDate%> <br/> <br/>
+        <b>Permissions</b> : <br/> 
+        
+        <%perms.forEach(
+          x=>
+          {
+            %>
+            <% if(x.id==user.id)
+            {
+              %>
+              <ul>
+                <% for(var i=0; i<x.permissions.length; i++) 
+                
+                {%>
+                   <li><%= x.permissions[i] %></li>
+                <% } %>
+                </ul>
+              
+              <%
+            }
+            %>
+            <%
+          })%>  <br/>
+        
+        <input type= "submit" name ="vote" value = "Edit"/> <br/> <br/>
+        <input type= "submit" name = "vote" value = "Delete"/> <br/> <br/>
+      
+       </form>
+
+    </div> 
+    <%}%>
+    
+   <br/> <br/>
+    
+    <%
+
+  }) %>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+<html>
+
+<head>
+
+
+<script>
+
+    function show (id)
+    {
+      // function which display the div if the button is clicked
+      document.getElementById(id).style.display = 'block'
+      
+    }
+
+</script>
+
+    
+
+</head>
+
+<body>
+  
+
+<h1 class = "HeaderCenter">Members Page</h1>
+
+<div class="HeaderCenter">
+
+  <form action="/Subscriptions/addMember/<%= userId%>" method="POST">
+  
+    <input  type= "submit" value = "Add Member"/>
+  
+  </form>
+  
+  </div>
+
+   
+<% members.forEach(member=>{
+
+    %>
+
+
+    <div class="DesignMember">
+
+      <form action="/Subscriptions/editMember/<%= userId%>/<%= member._id%>" method="POST">
+
+      <h2 class="HeaderCenter"> <%=member.Name%> </h2> 
+
+     <h3 class="HeaderCenter"> Email : <%=member.Email%> <br/> <br/> </h3>
+      
+     <h3 class="HeaderCenter"> City : <%=member.City%> <br/> <br/> </h3>
+       
+     <center><input class ="HeaderCenter" type="submit" name ="vote" value="Edit"/>  &nbsp;
+      <%if(perms.includes('DeleteSubscriptions'))
+      {%>
+        <input classe ="HeaderCenter" type="submit" name ="vote" value="Delete"/> </center> 
+        <%}%>
+       
+
+      </form>
+    
+      <div class="HeaderCenter">
+
+        <h3>Movies Watched</h3>
+
+        <%if(perms.includes('CreateSubscriptions'))
+      {%>
+        <input type="button" value="Subscribe to a new movie" onclick="show('<%=member._id%>')"">
+        <%}%>
+        <div hidden id = '<%=member._id%>'> <br/>
+
+          <div> Add a new Movie </div> <br/>
+
+          <form action="/Subscriptions/addSubscription/<%=member._id%>/<%=userId%>" method="POST">
+      
+               <select name= 'name' id ='optionsName'>
+                   
+                <% moviesName.forEach(mov=>
+
+                {%>
+                  
+                <option value="<%=mov.Name%>"><%=mov.Name%> </option>
+
+
+                <%})
+                
+                %> 
+
+                </select> <br/> <br/>
+
+                 Date : <input name ="date" type="text"/> <br/><br/>
+
+                <input type="submit" value="subscribe"/>
+
+              </form>
+        </div>
+
+       <ul>
+       <% subscriptions.forEach(sub=>{
+
+        %>
+        
+        <%if(member._id==sub.MemberId) 
+
+             {%>
+
+              <% for(var i=0; i < sub.Movies.length; i++) { %>
+                
+                <li><a href="/Movies/<%=userId%>/<%= sub.Movies[i].MovieName%>"><%= sub.Movies[i].MovieName%> </a>, <%= sub.Movies[i].date%> </li>
+                  
+             <% } %>
+
+             <%}
+         %>
+    
+       <%
+
+      }) %>
+      
+    </ul>
+
+    </div>
+  
+    </div> <br/> <br/>
+
+    <%
+
+  }) %>
+
+
+
+</body>
+
+</html>
+
+

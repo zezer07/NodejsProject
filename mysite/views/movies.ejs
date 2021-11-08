@@ -1,0 +1,73 @@
+
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+<html>
+
+<h1 class = "HeaderCenter">Movies Page</h1>
+
+<%if(perms.includes('CreateMovies')) 
+{%>
+
+<div class="HeaderCenter">
+
+  <form action="/Movies/addMovie/<%= userId%>" method="POST">
+  
+    <input  type= "submit" value = "Add Movie"/>
+  
+  </form>
+  
+  </div>
+
+  <%}
+
+  %>
+   
+<% movies.forEach(movie=>{
+
+    %>
+    <%if(movie.Name==nameMov||nameMov==1) 
+    { %>
+      <div class="DesignFilm">
+
+        <form action="/Movies/editMovie/<%= userId%>/<%=movie._id%>" method="POST">
+  
+        <h2 class="HeaderCenter"> <%=movie.Name%> , <%=movie.Premiered%> </h2> 
+  
+        <h3 class="HeaderCenter"><%=movie.Genres%> <br/> <br/></h3>
+        
+         <h3 class="HeaderCenter"> <img src = <%=movie.Image%>> <img/><br/></h3>
+  
+         <%if(perms.includes('UpdateMovies')) 
+       {%>
+         <h3 class="HeaderCenter"></h3>
+           
+         <center><input type="submit" name ="vote" value="Edit"/> &nbsp;
+         
+        <%}
+       %>
+
+       <%if(perms.includes('DeleteMovies')) 
+       {%>
+       <input type="submit" name ="vote" value="Delete"/> </center> 
+       <%}
+       %>
+      </form>
+  
+      </div> <br/> <br/>
+  
+        
+     <%} 
+     
+     %>
+    
+    <%
+
+  }) %>
+
+
+<body>
+
+</body>
+   
+
+</html>

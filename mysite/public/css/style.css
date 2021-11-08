@@ -1,0 +1,77 @@
+.DesignUsers{
+
+    border: 5px solid;
+    background-color: cornflowerblue;
+    width: 33%;
+    height: auto;
+    margin: auto;
+    margin-top: 33px;
+    text-align: center;
+}
+
+
+.DesignUserEdit{
+
+    border: 5px solid;
+    background-color: cornflowerblue;
+    width: 33%;
+    height: auto;
+    margin: auto;
+    margin-top: auto
+}
+
+
+.DesignFilm{
+
+    border: 5px solid;
+    width: 33%;
+    height: auto;
+    background-color: rgb(216, 237, 100);
+    margin: auto;
+    margin-bottom: 33px;
+    
+}
+.DesignMember{
+
+    border: 5px solid;
+    width: 33%;
+    height: auto;
+    background-color: violet;
+    margin: auto;
+    margin-bottom: 33px;
+    
+}
+
+.HeaderCenter{
+
+    text-align: center;
+}
+
+.DesignFilmEdit{
+
+    border: 5px solid;
+    width: 33%;
+    height: auto;
+    background-color: rgb(216, 237, 100);
+    margin: auto;
+    margin-bottom: auto;
+    
+}
+
+.DesignMemberEdit{
+
+    border: 5px solid;
+    width: 33%;
+    height: auto;
+    background-color: violet;
+    margin: auto;
+    margin-bottom: auto;
+    
+}
+
+.textBoxAlign{
+    display: block;
+    margin-left: 100px;
+    margin-top: 10px
+;
+}

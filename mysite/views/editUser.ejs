@@ -1,0 +1,35 @@
+    
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+<html>
+    
+<body>
+
+        <h3 class = "HeaderCenter">Edit User : <%= user.FirstName%> <%= user.LastName%></h3>
+
+        <div class="DesignUserEdit">
+
+            <br/>
+
+            <form action="/UserManagement/update/<%=user.id%>" method="POST">
+
+             First Name :  <input type="text" value="<%= user.FirstName%>" name="firstName"/> <br/>
+             Last Name :  <input type="text" value="<%= user.LastName%>" name="lastName"/> <br/>
+             User Name :  <input type="text" value="<%= user.UserName%>" name="userName"/> <br/>
+             Session timeout :  <input type="text" value="<%= user.SessionTimeOut%>" name="sessionTimeout"/> <br/>
+             Created date :  <input type="text" value="<%= user.CreatedDate%>" name="createdDate"/> <br/> <br/>
+             Permisions : <br/>
+              <input type="checkbox"  name="viewSub" <%= perms.permissions.includes("ViewSubscriptions") ? "checked" : "" %>/> View Subscriptions <br/> 
+              <input type="checkbox"  name="createSub" <%= perms.permissions.includes("CreateSubscriptions") ? "checked" : "" %>/> Create Subscriptions <br/> 
+              <input type="checkbox"  name="deleteSub" <%= perms.permissions.includes("DeleteSubscriptions") ? "checked" : "" %>/> Delete Subscriptions <br/> 
+              <input type="checkbox"  name="viewMovs" <%= perms.permissions.includes("ViewMovies") ? "checked" : "" %>/> View Movies <br/> 
+              <input type="checkbox"  name="createMovs" <%= perms.permissions.includes("CreateMovies") ? "checked" : "" %>/> Create Movies <br/> 
+              <input type="checkbox"  name="deleteMovs" <%= perms.permissions.includes("DeleteMovies") ? "checked" : "" %>/> Delete Movies <br/> 
+              <input type="checkbox"  name="updateMovs" <%= perms.permissions.includes("UpdateMovies") ? "checked" : "" %>/> Update Movies <br/> <br/>
+              <input type= "submit" name ="vote" value = "Update"/> <br/> <br/>
+              <input type= "submit" name ="vote" value = "Cancel"/> <br/> <br/>
+      
+          </div> <br/> <br/>
+</body>
+
+</html>
