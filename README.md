@@ -14,7 +14,7 @@ Technologies:
 
 -HTML Pages returned by EJS
 
-In order to run the system you must first run the server with -npm install and -node main.js. Then, in order to activate the website - npm install , and -npm start.
+In order to run the system you must first run the server WS Subscriptions with -npm install and -node main.js. Then, in order to activate the website - npm install , and -npm start.
 
 Now when you first log into the system you can log in with the guest account:
 
