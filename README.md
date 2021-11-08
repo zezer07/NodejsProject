@@ -9,7 +9,9 @@ The system admin can also work on the employees - set pemissions, add new employ
 Technologies:
 
 -Server Side using Node and Express.js.
+
 -Database management using MongoDB and jsonfiles.
+
 -HTML Pages returned by EJS
 
 In order to run the system you must first run the server with npm install and node main.js. Then, in order to activate the website - npm insatll , and then npm start.
