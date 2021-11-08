@@ -1,4 +1,4 @@
-# nodejsproject
+# Cinema Managment System
 
 Website that enables movies and clients' subscriptions management, including employee management - roles and permissions.
 
