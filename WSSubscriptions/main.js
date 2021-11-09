@@ -5,6 +5,8 @@ const subscriptionsRouter = require('./routers/subscriptionsRouter')
 const app = express();
 const cors = require('cors');
 
+//configs
+
 app.use(express.json());
 app.use(express.urlencoded({extended : false}));
 app.use(cors());
