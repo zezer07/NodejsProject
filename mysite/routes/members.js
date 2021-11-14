@@ -37,7 +37,6 @@ router.get('/:id', async function(req, res, next) {
     
   });
 
-              
      
     res.render('members', {members : dataMembers,userId : req.params.id, perms : permissions, subscriptions : subs, moviesName : movies });
   });
